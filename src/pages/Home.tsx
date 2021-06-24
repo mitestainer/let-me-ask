@@ -30,6 +30,10 @@ export const Home = () => {
       setRoomCode('')
       return
     }
+    if (roomRef.val().endedAt) {
+      alert('Sala já fechada')
+      return
+    }
     history.push(`/rooms/${roomCode}`)
   }
 
