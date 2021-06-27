@@ -1,5 +1,6 @@
 import { Button } from './styles'
 import { FiCopy } from 'react-icons/fi'
+import toast, { Toaster } from 'react-hot-toast'
 
 type RoomCodeProps = {
   code: string
@@ -8,15 +9,20 @@ type RoomCodeProps = {
 export const RoomCode = (props: RoomCodeProps) => {
   const copyRoomCodeoClipboard = () => {
     navigator.clipboard.writeText(props.code)
-    // react hot toast
+    toast.success('Copiado!', {
+      duration: 1000
+    });
   }
 
   return (
-    <Button onClick={copyRoomCodeoClipboard} title="Copiar para a área de transferência">
-      <div>
-        <FiCopy color="#fff" size={20} />
-      </div>
-      <span>Sala {props.code}</span>
-    </Button>
+    <>
+      <Button onClick={copyRoomCodeoClipboard} title="Copiar para a área de transferência">
+        <div>
+          <FiCopy color="#fff" size={20} />
+        </div>
+        <span>Sala {props.code}</span>
+      </Button>
+      <Toaster />
+    </>
   )
 }
