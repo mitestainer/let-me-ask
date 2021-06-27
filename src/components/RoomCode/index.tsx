@@ -6,7 +6,7 @@ type RoomCodeProps = {
   code: string
 }
 
-export const RoomCode = (props: RoomCodeProps) => {
+export const RoomCode: React.FC<RoomCodeProps> = (props: RoomCodeProps) => {
   const copyRoomCodeoClipboard = () => {
     navigator.clipboard.writeText(props.code)
     toast.success('Copiado!', {

@@ -6,7 +6,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isOutlined?: boolean
 }
 
-export const Button = ({ isOutlined = false, ...rest }: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({ isOutlined = false, ...rest }: ButtonProps) => {
   return (
     <CustomButton isOutlined={isOutlined} {...rest} />
   )

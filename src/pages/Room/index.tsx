@@ -15,7 +15,7 @@ type RoomParams = {
   id: string
 }
 
-export const Room = () => {
+export const Room: React.FC = () => {
   const { user } = useAuth()
   const params = useParams<RoomParams>()
   const [newQuestion, setNewQuestion] = useState('')

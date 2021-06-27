@@ -7,7 +7,7 @@ import { database } from '../../services/firebase'
 import { useAuth } from '../../hooks/useAuth'
 import { HomeComponent } from '../../components/HomeComponent'
 
-export const NewRoom = () => {
+export const NewRoom: React.FC = () => {
   const history = useHistory()
   const { user } = useAuth()
   const [newRoom, setNewRoom] = useState('')
