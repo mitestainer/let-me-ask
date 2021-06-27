@@ -6,6 +6,7 @@ import { Button } from '../../components/Button'
 import { useAuth } from '../../hooks/useAuth'
 import { database } from '../../services/firebase'
 import { FaGoogle } from 'react-icons/fa'
+import toast, { Toaster } from 'react-hot-toast'
 
 export const Home = () => {
   const history = useHistory()
@@ -22,12 +23,17 @@ export const Home = () => {
     if (roomCode.trim() === '') return
     const roomRef = await database.ref(`rooms/${roomCode}`).get()
     if (!roomRef.exists()) {
-      alert('Room does not exist')
+      toast.error(<span>Sala <strong>{roomCode}</strong> não encontrada!</span>, {
+        duration: 2000
+      })
       setRoomCode('')
       return
     }
     if (roomRef.val().endedAt) {
-      alert('Sala já fechada')
+      toast(<span>Sala já fechada</span>, {
+        duration: 2000,
+        icon: '🔒'
+      })
       return
     }
     history.push(`/rooms/${roomCode}`)
@@ -44,6 +50,7 @@ export const Home = () => {
         <input type="text" placeholder="Digite o código da sala" onChange={e => setRoomCode(e.target.value)} value={roomCode} />
         <Button type="submit">Entrar na sala</Button>
       </form>
+      <Toaster />
     </HomeComponent>
   )
 }
