@@ -20,6 +20,7 @@ Sendo assim, fiz as seguintes alterações no projeto:
 
 - ✔️ Redirecionamento para domínio prórpio ([https://letmeask.mitestainer.com/](https://letmeask.mitestainer.com/)) ➡️
 - ✔️ Adição de favicon 💁
+- ✔️ Utilização do Github Actions para o deploy (CI/CD) ⚙️
 - ✔️ Upgrade para Styled Components 💅
 - ✔️ Responsividade, com ajuste de layout e menu hamburguer 📱
 - ✔️ Inclusão de Toasts no lugar dos alerts do browser 🍞
