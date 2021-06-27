@@ -1,5 +1,5 @@
-import copyImg from '../assets/images/copy.svg'
-import '../styles/room-code.scss'
+import { Button } from './styles'
+import { FiCopy } from 'react-icons/fi'
 
 type RoomCodeProps = {
   code: string
@@ -12,11 +12,11 @@ export const RoomCode = (props: RoomCodeProps) => {
   }
 
   return (
-    <button className="room-code" onClick={copyRoomCodeoClipboard}>
+    <Button onClick={copyRoomCodeoClipboard} title="Copiar para a área de transferência">
       <div>
-        <img src={copyImg} alt="Copy room code" />
+        <FiCopy color="#fff" size={20} />
       </div>
       <span>Sala {props.code}</span>
-    </button>
+    </Button>
   )
 }

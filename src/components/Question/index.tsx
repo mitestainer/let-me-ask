@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import '../styles/question.scss'
+import { QuestionComponent, UserInfo } from './styles'
 
 type QuestionProps = {
   content: string
@@ -15,15 +15,15 @@ type QuestionProps = {
 
 export const Question = ({ content, author, isAnswered = false, isHighlighted = false, children }: QuestionProps) => {
   return (
-    <div className={`question${isAnswered ? ' answered' : ''}${isHighlighted ? ' highlighted' : ''}`}>
+    <QuestionComponent isAnswered={isAnswered} isHighLighted={isHighlighted}>
       <p>{content}</p>
       <footer>
-        <div className="user-info">
+        <UserInfo isHighLighted={isHighlighted}>
           <img src={author.avatar} alt={author.name} />
           <span>{author.name}</span>
-        </div>
+        </UserInfo>
         <div>{children}</div>
       </footer>
-    </div>
+    </QuestionComponent>
   )
 }
