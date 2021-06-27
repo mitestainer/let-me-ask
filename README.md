@@ -24,7 +24,7 @@ Sendo assim, fiz as seguintes alterações no projeto:
 - ✔️ Upgrade para Styled Components 💅
 - ✔️ Responsividade, com ajuste de layout e menu hamburguer 📱
 - ✔️ Inclusão de Toasts no lugar dos alerts do browser 🍞
-- ⏳ Ajuste de metatags e adição de thumbnail para social sharing 🔗
+- ✔️ Ajuste de metatags e adição de thumbnail para social sharing 🔗
 - ⏳ Desenvolvimento do prompt de exclusão da sala ⚠️
 - ⏳ Tema escuro 🌙
 - ⏳ Inclusão de linter 🔎
