@@ -55,7 +55,7 @@ export const Content = styled.div<ContentProps>`
       display: initial;
       position: fixed;
       content: '';
-      top: 94px;
+      top: 98px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -76,7 +76,7 @@ export const Menu = styled.div<MenuProps>`
 
   @media screen and (max-width: 768px) {
     position: absolute;
-    top: 94px;
+    top: 98px;
     bottom: 0;
     right: 0;
     background-color: #fff;
