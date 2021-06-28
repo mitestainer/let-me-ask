@@ -8,6 +8,8 @@ import { database } from '../../services/firebase'
 import { RoomComponent } from '../../components/RoomComponent'
 import { Action } from '../../components/Action'
 import { FiCheckCircle, FiMessageSquare, FiTrash } from 'react-icons/fi'
+import { DeletePrompt } from '../../components/DeletePrompt'
+import { useState } from 'react'
 
 type RoomParams = {
   id: string
@@ -18,6 +20,8 @@ export const AdminRoom = () => {
   const roomId = params.id
 
   const { questions } = useRoom(roomId)
+
+  const [showPrompt, setShowPrompt] = useState(false)
 
   const handleCheckQuestion = async (questionId: string) => {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
@@ -32,9 +36,8 @@ export const AdminRoom = () => {
   }
 
   const handleDeleteQuestion = async (questionId: string) => {
-    if (window.confirm('Ter certeza que deseja excluir?')) {
-      await database.ref(`rooms/${roomId}/questions/${questionId}`).remove()
-    }
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).remove()
+    setShowPrompt(false)
   }
 
   return (
@@ -57,10 +60,11 @@ export const AdminRoom = () => {
               </>
             )}
             <Action
-              handler={() => handleDeleteQuestion(question.id)}
+              handler={() => setShowPrompt(true)}
               icon={<FiTrash />}
               title="Remover pergunta"
             />
+            {showPrompt && <DeletePrompt handler={() => handleDeleteQuestion(question.id)} exit={() => setShowPrompt(false)} />}
           </Question>
         ))}
       </QuestionsList>
