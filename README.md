@@ -6,7 +6,7 @@ Este é o repositório do **Let Me Ask**, projeto da sexta edição do Next Leve
 
 É uma aplicação onde você pode fazer perguntas sobre diversos temas. O usuário é livre para criar salas de temas específicos e destacar as perguntas mais interessantes.
 
-Voce pode acessar o **Let Me Ask** [aqui](https://letmeask.mitestainer.com/).
+Você pode acessar o **Let Me Ask** <a href="https://letmeask.mitestainer.com/" target="_blank">aqui</a>.
 
 ## Detalhes
 
@@ -25,11 +25,11 @@ Sendo assim, fiz as seguintes alterações no projeto:
 - ✔️ Responsividade, com ajuste de layout e menu hamburguer 📱
 - ✔️ Inclusão de Toasts no lugar dos alerts do browser 🍞
 - ✔️ Ajuste de metatags e adição de thumbnail para social sharing 🔗
-- ⏳ Desenvolvimento do prompt de exclusão da sala ⚠️
+- ✔️ Desenvolvimento do prompt de exclusão da sala ⚠️
 - ⏳ Tema escuro 🌙
 - ⏳ Inclusão de linter 🔎
 
-E muito mais! 🚀
+E muito mais possibilidades! 🚀
 
 ## Para contribuir
 
