@@ -8,8 +8,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #f8f8f8;
-    color: #29292e;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.colors.primary};
+    transition: background-color .5s, color .5s;
   }
 
   body,
@@ -23,5 +24,9 @@ export const GlobalStyles = createGlobalStyle`
   body,
   #root {
     height: 100%;
+  }
+
+  #root {
+    position: relative;
   }
 `
