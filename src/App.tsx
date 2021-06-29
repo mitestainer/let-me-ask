@@ -23,10 +23,7 @@ function App() {
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       const storedTheme = localStorage.getItem(storageName)
-      if (storedTheme) {
-        const themeValue = JSON.parse(storedTheme)
-        setTheme(themeValue)
-      } else {
+      if (storedTheme && JSON.parse(storedTheme).title === 'light') {
         setTheme(dark)
       }
     }

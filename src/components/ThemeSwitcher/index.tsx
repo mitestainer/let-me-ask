@@ -16,7 +16,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, curre
       <Wrapper>
         <span>🌞</span>
         <span>🌛</span>
-        <Switch isDarkOn={currentTheme === 'light'}></Switch>
+        <Switch isDarkOn={currentTheme === 'dark'}></Switch>
         {/* {isDarkOn ? 'dark' : 'light'} */}
       </Wrapper>
     </Switcher>
