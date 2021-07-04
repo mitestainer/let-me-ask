@@ -5,12 +5,12 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color .5s, color .5s;
   }
 
   body {
     background-color: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.colors.primary};
-    transition: background-color .5s, color .5s;
   }
 
   body,

@@ -9,25 +9,19 @@ type UserInfoProps = {
   isHighLighted: boolean
 }
 
-const setBackgroundColor = (isAnswered: boolean, isHighLighted: boolean) => {
-  if (isAnswered) return '#dbdcdd'
-  if (isHighLighted) return '#f4f0ff'
-  return '#fefefe'
-}
-
 export const QuestionComponent = styled.div<QuestionProps>`
-  background-color: ${({ isAnswered, isHighLighted }) => setBackgroundColor(isAnswered, isHighLighted)};
+  background-color: ${({ theme, isAnswered }) => isAnswered ? '#dbdcdd' : theme.question.cardBackgroundColor};
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba($color: #000000, $alpha: 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .4);
   padding: 24px;
   border: ${({ isHighLighted }) => isHighLighted ? '1px solid #835afd' : '0'};
 
-  & + .question {
+  & + & {
     margin-top: 8px;
   }
 
   p {
-    color: #29292e;
+    color: ${({ isAnswered }) => isAnswered ? '#29292e' : 'inherit'};
   }
 
   footer {
@@ -55,7 +49,7 @@ export const UserInfo = styled.div<UserInfoProps>`
 
   span {
     margin-left: 8px;
-    color: ${({ isHighLighted }) => isHighLighted ? '#29292e' : '#737380'};
+    color: #737380;
     font-size: 14px;
   }
 `

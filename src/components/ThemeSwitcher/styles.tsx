@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Switcher = styled.div`
   width: 54px;
   height: 26px;
-  background-color: #fff;
   border: 1px solid #555;
   box-sizing: content-box;
   position: absolute;

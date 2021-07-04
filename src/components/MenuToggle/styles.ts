@@ -18,7 +18,7 @@ type LineProps = {
 export const Line = styled.span<LineProps>`
   height: 2px;
   width: 20px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.primary};
 
   & + span {
     margin-top: 3px;
