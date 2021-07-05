@@ -26,7 +26,7 @@ Sendo assim, fiz as seguintes alterações no projeto:
 - ✔️ Inclusão de Toasts no lugar dos alerts do browser 🍞
 - ✔️ Ajuste de metatags e adição de thumbnail para social sharing 🔗
 - ✔️ Desenvolvimento do prompt de exclusão da sala ⚠️
-- ⏳ Tema escuro 🌙
+- ✔️ Tema escuro 🌙
 - ✔️ Inclusão de linter 🔎
 
 E muito mais possibilidades! 🚀

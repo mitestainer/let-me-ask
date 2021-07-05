@@ -1,17 +1,23 @@
 import styled from 'styled-components'
 
 export const PageRoom = styled.div`
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+
  header {
     padding: 24px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid;
+    border-bottom-color: ${({ theme }) => theme.colors.roomBorder};
   }
 
   main {
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 24px;
 
     @media screen and (max-width: 768px) {
-      padding: 0 24px;
+      padding: 0 24px 24px;
     }
 
     form {
@@ -20,10 +26,11 @@ export const PageRoom = styled.div`
         border: 0;
         padding: 16px;
         border-radius: 8px;
-        background-color: #fefefe;
-        box-sizing: 0 2px 12px rgba(0, 0, 0, 0.4);
+        background-color: transparent;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
         resize: vertical;
         min-width: 130px;
+        color: inherit;
 
         @media screen and (max-width: 768px) {
           min-height: 120px;
@@ -79,7 +86,7 @@ export const Menu = styled.div<MenuProps>`
     top: 98px;
     bottom: 0;
     right: 0;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.backgroundColor};
     flex-direction: column;
     align-items: flex-end;
     padding: 24px;
@@ -107,7 +114,6 @@ export const RoomTitle = styled.div`
   h1 {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
-    color: #29292e;
   }
 
   span {
@@ -152,7 +158,6 @@ export const UserInfo = styled.div`
 
   span {
     margin-left: 8px;
-    color: #29292e;
     font-weight: 500;
     font-size: 14px;
   }

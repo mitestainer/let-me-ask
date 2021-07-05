@@ -4,7 +4,7 @@ export const Button = styled.button`
   height: 40px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: inherit;
   border: 1px solid #835afd;
   cursor: pointer;
   display: flex;
@@ -25,5 +25,6 @@ export const Button = styled.button`
     padding: 0 16px 0 12px;
     font-size: 14px;
     font-weight: 500;
+    color: ${({ theme }) => theme.colors.primary}
   }
 `

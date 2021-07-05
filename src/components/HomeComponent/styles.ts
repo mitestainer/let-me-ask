@@ -11,7 +11,7 @@ export const PageAuth = styled.div`
 
   aside {
     flex: 7;
-    background-color: #835afd;
+    background-color: ${({ theme }) => theme.homeBackgroundColor};
     color: #fff;
     display: flex;
     flex-direction: column;
