@@ -15,7 +15,7 @@ type RoomParams = {
   id: string
 }
 
-export const AdminRoom = () => {
+export const AdminRoom: React.FC = () => {
   const params = useParams<RoomParams>()
   const roomId = params.id
 

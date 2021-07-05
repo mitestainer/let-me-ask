@@ -6,7 +6,7 @@ type MenuToggleProps = {
   isActive: boolean
 }
 
-export const MenuToggle: FC<MenuToggleProps> = ({ handler, isActive }) => {
+export const MenuToggle: FC<MenuToggleProps> = ({ handler, isActive }: MenuToggleProps) => {
   return (
     <Toggle onClick={handler}>
       <Line isActive={isActive}></Line>

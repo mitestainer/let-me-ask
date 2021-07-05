@@ -8,7 +8,7 @@ import { database } from '../../services/firebase'
 import { FaGoogle } from 'react-icons/fa'
 import toast from 'react-hot-toast'
 
-export const Home = () => {
+export const Home: React.FC = () => {
   const history = useHistory()
   const { user, signInWithGoogle } = useAuth()
   const [roomCode, setRoomCode] = useState('')

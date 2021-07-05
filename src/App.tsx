@@ -18,7 +18,7 @@ import { MenuToggleContext } from './contexts/MenuToggleContext'
 import { useContext } from 'react'
 import { Toaster } from 'react-hot-toast'
 
-function App() {
+const App: React.FC = () => {
   const storageName = 'theme'
   const [theme, setTheme] = usePersistedState<DefaultTheme>(storageName, light)
   const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light)
