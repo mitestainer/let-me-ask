@@ -15,7 +15,7 @@ export const Overlay = styled.div`
 export const Prompt = styled.div`
   width: 590px;
   height: 362px;
-  background-color: #F8F8F8;
+  background-color: ${({ theme }) => theme.backgroundColor};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ export const TextWrapper = styled.div`
     font-weight: 700;
     font-size: 24px;
     line-height: 34px;
-    color: #29292E;
+    color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 12px;
   }
 `

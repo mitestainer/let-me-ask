@@ -11,5 +11,6 @@ export const light = {
     colorAnswered: 'string',
     colorHighlighted: '#29292e',
     backgroundHighlighted: '#835afd'
-  }
+  },
+  toastBackgroundColor: '#fff'
 }
