@@ -5,7 +5,7 @@ type ThemeSwitcherProps = {
   currentTheme: string
 }
 
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, currentTheme }) => {
+export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, currentTheme }: ThemeSwitcherProps) => {
   return (
     <Switcher onClick={toggleTheme}>
       <Wrapper>
