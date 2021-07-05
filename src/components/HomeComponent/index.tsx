@@ -8,7 +8,7 @@ type HomeProps = {
   children: ReactNode
 }
 
-export const HomeComponent: React.FC<HomeProps> = ({ children }) => {
+export const HomeComponent: React.FC<HomeProps> = ({ children }: HomeProps) => {
   return (
     <PageAuth>
       <aside>

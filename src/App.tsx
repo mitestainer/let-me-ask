@@ -9,7 +9,7 @@ import { AdminRoom } from './pages/AdminRoom'
 
 import { GlobalStyles } from './styles/GlobalStyles'
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />

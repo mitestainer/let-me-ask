@@ -7,7 +7,7 @@ type PromptProps = {
   exit: () => void
 }
 
-export const DeletePrompt: React.FC<PromptProps> = ({ handler, exit }) => {
+export const DeletePrompt: React.FC<PromptProps> = ({ handler, exit }: PromptProps) => {
   return (
     <Overlay>
       <Prompt>

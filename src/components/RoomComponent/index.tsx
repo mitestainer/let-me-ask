@@ -21,7 +21,7 @@ type RoomParams = {
   id: string
 }
 
-export const RoomComponent: React.FC<RoomProps> = ({ children, admin = false }) => {
+export const RoomComponent: React.FC<RoomProps> = ({ children, admin = false }: RoomProps) => {
   const history = useHistory()
   const params = useParams<RoomParams>()
   const roomId = params.id
