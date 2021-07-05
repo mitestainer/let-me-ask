@@ -6,7 +6,7 @@ import { Button } from '../../components/Button'
 import { useAuth } from '../../hooks/useAuth'
 import { database } from '../../services/firebase'
 import { FaGoogle } from 'react-icons/fa'
-import toast, { Toaster } from 'react-hot-toast'
+import toast from 'react-hot-toast'
 
 export const Home = () => {
   const history = useHistory()
@@ -50,7 +50,6 @@ export const Home = () => {
         <input type="text" placeholder="Digite o código da sala" onChange={e => setRoomCode(e.target.value)} value={roomCode} />
         <Button type="submit">Entrar na sala</Button>
       </form>
-      <Toaster />
     </HomeComponent>
   )
 }

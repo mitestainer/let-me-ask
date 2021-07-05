@@ -1,6 +1,6 @@
 import { Button } from './styles'
 import { FiCopy } from 'react-icons/fi'
-import toast, { Toaster } from 'react-hot-toast'
+import toast from 'react-hot-toast'
 
 type RoomCodeProps = {
   code: string
@@ -22,7 +22,6 @@ export const RoomCode = (props: RoomCodeProps) => {
         </div>
         <span>Sala {props.code}</span>
       </Button>
-      <Toaster />
     </>
   )
 }

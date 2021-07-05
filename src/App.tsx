@@ -16,6 +16,7 @@ import { light } from './styles/themes/light'
 import { dark } from './styles/themes/dark'
 import { MenuToggleContext } from './contexts/MenuToggleContext'
 import { useContext } from 'react'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const storageName = 'theme'
@@ -46,6 +47,12 @@ function App() {
               <Route path="/admin/rooms/:id" component={AdminRoom} />
             </Switch>
           </AuthContextProvider>
+          <Toaster toastOptions={{
+            style: {
+              backgroundColor: theme.toastBackgroundColor,
+              color: theme.colors.primary
+            },
+          }} />
         </BrowserRouter>
         <ThemeSwitcher toggleTheme={toggleTheme} currentTheme={theme.title} />
       </ThemeProvider>

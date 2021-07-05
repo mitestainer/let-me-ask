@@ -14,6 +14,7 @@ declare module 'styled-components' {
       colorAnswered: string,
       colorHighlighted: string,
       backgroundHighlighted: string
-    }
+    },
+    toastBackgroundColor: string
   }
 }

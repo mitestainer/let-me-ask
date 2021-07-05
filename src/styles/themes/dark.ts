@@ -11,5 +11,6 @@ export const dark = {
     colorAnswered: 'string',
     colorHighlighted: '#29292e',
     backgroundHighlighted: 'rgba(131, 90, 253, 1)'
-  }
+  },
+  toastBackgroundColor: '#323232'
 }
