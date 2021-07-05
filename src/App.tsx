@@ -14,6 +14,8 @@ import { ThemeProvider, DefaultTheme } from 'styled-components'
 import { ThemeSwitcher } from './components/ThemeSwitcher'
 import { light } from './styles/themes/light'
 import { dark } from './styles/themes/dark'
+import { MenuToggleContext } from './contexts/MenuToggleContext'
+import { useContext } from 'react'
 
 function App() {
   const storageName = 'theme'
@@ -29,10 +31,12 @@ function App() {
     }
   }, [setTheme])
 
+  const { isMenuOpen } = useContext(MenuToggleContext)
+
   return (
     <>
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
+        <GlobalStyles isMenuOpen={isMenuOpen} />
         <BrowserRouter>
           <AuthContextProvider>
             <Switch>

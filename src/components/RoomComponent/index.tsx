@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useContext } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import { database } from '../../services/firebase'
 
@@ -11,6 +11,7 @@ import { useRoom } from '../../hooks/useRoom'
 
 import { PageRoom, Content, RoomTitle, Menu } from './styles'
 import { MenuToggle } from '../MenuToggle'
+import { MenuToggleContext } from '../../contexts/MenuToggleContext'
 
 type RoomProps = {
   admin?: boolean
@@ -27,9 +28,9 @@ export const RoomComponent: React.FC<RoomProps> = ({ children, admin = false }) 
   const roomId = params.id
   const { title, questions } = useRoom(roomId)
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { isMenuOpen, toggle } = useContext(MenuToggleContext)
 
-  const handleToggle = () => setIsMenuOpen(!isMenuOpen)
+  const handleToggle = () => toggle(!isMenuOpen)
 
   const handleEndRoom = async () => {
     await database.ref(`rooms/${roomId}`).update({

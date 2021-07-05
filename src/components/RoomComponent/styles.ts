@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const PageRoom = styled.div`
   position: relative;
   overflow: hidden;
+  min-height: 100%;
 
  header {
     padding: 24px;
