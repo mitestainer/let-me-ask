@@ -27,7 +27,7 @@ Sendo assim, fiz as seguintes alterações no projeto:
 - ✔️ Ajuste de metatags e adição de thumbnail para social sharing 🔗
 - ⏳ Desenvolvimento do prompt de exclusão da sala ⚠️
 - ⏳ Tema escuro 🌙
-- ⏳ Inclusão de linter 🔎
+- ✔️ Inclusão de linter 🔎
 
 E muito mais! 🚀
 
